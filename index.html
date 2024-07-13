@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <link href="./dist/output.css" rel="stylesheet"> <!-- This link is for the custom Tailwind CSS -->
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-gray-800 text-white"> <!-- Tailwind CSS: bg-gray-800, text-white -->
+        <nav class="container mx-auto p-4 flex justify-between items-center">
+            <a  class="text-2xl font-bold">CarRental</a>
+            <div>
+                <a href="../index.html" class="mx-2">Home</a>
+                <a href="../html/about.html" class="mx-2">About</a>
+                <a href="../html/cars.html" class="mx-2">Cars</a>
+                <a href="../html/contact.html" class="mx-2">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main Section -->
+    <section class="bg-cover bg-center h-screen" style="background-image: url('img/bg-1.jpg');"> <!-- Tailwind CSS: bg-cover, bg-center, h-screen -->
+        <div class="flex items-center justify-center h-full bg-black bg-opacity-50"> <!-- Tailwind CSS: flex, items-center, justify-center, h-full, bg-black, bg-opacity-50 -->
+            <div class="text-center text-white">
+                <h1 class="text-5xl font-bold mb-4">Find Your Perfect Rental Car</h1> <!-- Tailwind CSS: text-5xl, font-bold, mb-4 -->
+                <p class="text-xl mb-8">Best prices, no hidden fees, and free cancellations</p> <!-- Tailwind CSS: text-xl, mb-8 -->
+                <a href="../html/reserve.html" class="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold">Rent a Car Now</a> <!-- Tailwind CSS: bg-yellow-500, text-black, px-6, py-3, rounded-full, font-bold -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Cars -->
+    <section class="container mx-auto my-12">
+        <h2 class="text-3xl font-bold text-center mb-8">Featured Cars</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Car 1 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <img src="img/car1.jpg" alt="Car 1" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">JEEP</h3>
+                    <p class="text-gray-700">
+                        Jeep is an iconic American automotive brand known for its rugged, off-road capable vehicles.
+                    </p>
+                </div>
+            </div>
+            <!-- Car 2 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <img src="img/car2.jpg" alt="Car 2" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">Mercedes-Benz</h3>
+                    <p class="text-gray-700">
+                        Mercedes-Benz, often referred to simply as "Mercedes," is a globally renowned luxury automobile manufacturer known for its high-quality, elegantly designed vehicles.
+                    </p>
+                </div>
+            </div>
+            <!-- Car 3 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <img src="img/car3.jpg" alt="Car 3" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">Audi A4</h3>
+                    <p class="text-gray-700">
+                        The Audi A4 is a premium compact sedan known for its elegant design, advanced technology, and superior performance.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="bg-gray-100 py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="text-6xl text-yellow-500 mb-4">1</div>
+                    <h3 class="text-xl font-bold mb-2">Choose Your Car</h3>
+                    <p class="text-gray-700">Browse through our wide selection of rental cars.</p>
+                </div>
+                <div>
+                    <div class="text-6xl text-yellow-500 mb-4">2</div>
+                    <h3 class="text-xl font-bold mb-2">Book Online</h3>
+                    <p class="text-gray-700">Reserve your car quickly and easily through our website.</p>
+                </div>
+                <div>
+                    <div class="text-6xl text-yellow-500 mb-4">3</div>
+                    <h3 class="text-xl font-bold mb-2">Drive Away</h3>
+                    <p class="text-gray-700">Pick up your car and enjoy your trip!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container mx-auto my-12">
+        <h2 class="text-3xl font-bold text-center mb-8">Testimonials</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white shadow-lg rounded-lg p-4">
+                <p class="text-gray-700 mb-4">"Great service and fantastic cars! Will definitely rent again."</p>
+                <h3 class="text-xl font-bold">- Jakie chan</h3>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="bg-white shadow-lg rounded-lg p-4">
+                <p class="text-gray-700 mb-4">"Affordable prices and a smooth rental process. Highly recommend."</p>
+                <h3 class="text-xl font-bold">- Swizel cruz</h3>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="bg-white shadow-lg rounded-lg p-4">
+                <p class="text-gray-700 mb-4">"Excellent customer service and a great selection of cars."</p>
+                <h3 class="text-xl font-bold">- Jhon Fernandez </h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-yellow-500 py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-black mb-4">Ready to Book Your Car?</h2>
+            <a href="../html/reserve.html" class="bg-black text-white px-6 py-3 rounded-full font-bold">Get Started</a> <!-- Tailwind CSS: bg-black, text-white, px-6, py-3, rounded-full, font-bold -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 CarRental. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="https://www.facebook.com/carrental" class="mx-2">Facebook</a>
+                <a href=" https://www.twitter.com/carrental" class="mx-2">Twitter</a>
+                <a href=" https://www.instagram.com/carrental" class="mx-2">Instagram</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

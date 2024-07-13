@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation - Car Rental</title>
+    <link href="../dist/output.css" rel="stylesheet"> <!-- Link to custom Tailwind CSS -->
+    <style>
+        .form-bg {
+            background-image: url('../img/form-res.jpg'); /* image path  */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* Style for transparent input fields */
+        .transparent-input {
+            background-color: rgba(255, 255, 255, 0.2); /* Adjust the alpha (4th value) for transparency */
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Adjust the alpha (4th value) for border transparency */
+            color: white; /* Text color */
+            padding: 0.75rem; /* Padding */
+            width: 100%; /* Full width */
+            transition: all 0.3s ease; /* Transition for smoothness */
+        }
+        /* Style for transparent input fields when focused */
+        .transparent-input:focus {
+            border-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha (4th value) for focused border transparency */
+            outline: none; /* Remove default focus outline */
+        }
+
+         /* Placeholder color */
+         .transparent-input::placeholder {
+            color: white; /* Placeholder text color */
+        }
+
+        /* Style for select options */
+        .transparent-input option {
+            color: black; /* Text color */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-gray-800 text-white">
+        <nav class="container mx-auto p-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">CarRental</a> <!-- Tailwind CSS: text-2xl, font-bold -->
+            <div>
+                <a href="../index.html" class="mx-2">Home</a> <!-- Tailwind CSS: mx-2 -->
+                <a href="../html/about.html" class="mx-2">About</a> <!-- Tailwind CSS: mx-2 -->
+                <a href="../html/cars.html" class="mx-2">Cars</a> <!-- Tailwind CSS: mx-2 -->
+                <a href="../html/contact.html" class="mx-2">Contact</a> <!-- Tailwind CSS: mx-2 -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- Reservation Form -->
+    <section class="form-bg container mx-auto my-12 p-6 rounded-lg shadow-md">
+        <h2 class="text-3xl font-bold text-center mb-8 text-white">Reservation Form</h2> <!-- Tailwind CSS: text-3xl, font-bold, mb-8, text-white -->
+        <form id="reservationForm" class="max-w-md mx-auto">
+            <div class="mb-4">
+                <label for="name" class="block text-white font-bold mb-2">Name</label> <!-- Tailwind CSS: block, text-white, font-bold, mb-2 -->
+                <input type="text" id="name" name="name" class="transparent-input focus:ring-2 focus:ring-yellow-500 focus:bg-transparent focus:border-transparent rounded-md" placeholder="Enter your name"> <!-- Tailwind CSS: transparent-input -->
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-white font-bold mb-2">Email</label> <!-- Tailwind CSS: block, text-white, font-bold, mb-2 -->
+                <input type="email" id="email" name="email" class="transparent-input focus:ring-2 focus:ring-yellow-500 focus:bg-transparent focus:border-transparent rounded-md" placeholder="Enter your email"> <!-- Tailwind CSS: transparent-input -->
+            </div>
+            <div class="mb-4">
+                <label for="phone" class="block text-white font-bold mb-2">Phone</label> <!-- Tailwind CSS: block, text-white, font-bold, mb-2 -->
+                <input type="tel" id="phone" name="phone" class="transparent-input focus:ring-2 focus:ring-yellow-500 focus:bg-transparent focus:border-transparent rounded-md" placeholder="Enter your phone number"> <!-- Tailwind CSS: transparent-input -->
+            </div>
+            <div class="mb-4">
+                <label for="car" class="block text-white font-bold mb-2">Car Model</label> <!-- Tailwind CSS: block, text-white, font-bold, mb-2 -->
+                <select id="car" name="car" class="transparent-input focus:ring-2 focus:ring-yellow-500 focus:bg-transparent focus:border-transparent rounded-md">
+                    <option value="" disabled selected>Select a car model</option>
+                    <option value="jeep">JEEP</option>
+                    <option value="mercedes">Mercedes-Benz</option>
+                    <option value="audi">Audi A4</option>
+                    <option value="Toyota">Toyota camry</option>
+                    <option value="Honda">Honda Civic</option>
+                    <option value="Ford">Ford Mustang</option>
+                </select> <!-- Tailwind CSS: transparent-input -->
+            </div>
+            <div class="mb-8">
+                <label for="message" class="block text-white font-bold mb-2">Message</label> <!-- Tailwind CSS: block, text-white, font-bold, mb-2 -->
+                <textarea id="message" name="message" rows="4" class="transparent-input focus:ring-2 focus:ring-yellow-500 focus:bg-transparent focus:border-transparent rounded-md" placeholder="Enter your message"></textarea> <!-- Tailwind CSS: transparent-input -->
+            </div>
+            <div class="text-center">
+                <button type="button" id="submitReservation" class="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold hover:bg-yellow-600 transition duration-300">Submit</button> <!-- Tailwind CSS: bg-yellow-500, text-black, px-6, py-3, rounded-full, font-bold, hover:bg-yellow-600, transition duration-300 -->
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 CarRental. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="https://www.facebook.com/carrental" class="mx-2">Facebook</a>
+                <a href="https://www.twitter.com/carrental" class="mx-2">Twitter</a>
+                <a href="https://www.instagram.com/carrental" class="mx-2">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('submitReservation').addEventListener('click', function() {
+            window.location.href = '../html/payment.html';
+        });
+    </script>
+
+</body>
+</html>
