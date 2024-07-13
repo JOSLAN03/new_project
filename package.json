@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tailwindcss -i ./css/styles.css -o ./css/output.css --minify"
+    "build": "vite build"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
